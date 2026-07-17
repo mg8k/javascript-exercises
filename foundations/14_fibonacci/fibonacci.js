@@ -1,10 +1,10 @@
 const fibonacci = function(num) {
-    let total = 0;
-    for(let i = 0 ; i<num; i++){
-        total += i-1;
-        console.log(total);
+    let seq =[0,1];
+    if(num <0) return "OOPS";
+    for(let i = 2 ; i<=num; i++){
+       seq[i] = seq[i-1] + seq[i-2];
     }
-    return total;
+    return seq[num];
 };
 
 // Do not edit below this line
